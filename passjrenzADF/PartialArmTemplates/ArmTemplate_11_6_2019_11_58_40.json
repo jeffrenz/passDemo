@@ -1,0 +1,29 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "passjrenzADF"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"sasUri": "https://passjrenz.blob.core.windows.net/?sv=2018-03-28&ss=b&srt=sco&sp=rwdlacup&st=2019-10-31T19%3A20%3A41Z&se=2020-10-31T19%3A20%3A00Z&sig=6rpb7jJVFI%2FXPqV6fG4l4pTYT2vY73R0gVDwrNhM1A8%3D"
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
