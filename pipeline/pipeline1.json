@@ -40,7 +40,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedTextMarch",
+						"referenceName": "DelimitedTextWeb",
 						"type": "DatasetReference"
 					}
 				],
