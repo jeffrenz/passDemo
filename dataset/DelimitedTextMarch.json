@@ -1,0 +1,21 @@
+{
+	"name": "DelimitedTextMarch",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "NYCTaxiSite",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
