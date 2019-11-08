@@ -7,8 +7,7 @@
 		},
 		"parameters": {
 			"number": {
-				"type": "int",
-				"defaultValue": 1
+				"type": "int"
 			}
 		},
 		"annotations": [],
