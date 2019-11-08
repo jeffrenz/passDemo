@@ -1,9 +1,9 @@
 {
-	"name": "pipeline1",
+	"name": "blob_to_azureSQL",
 	"properties": {
 		"activities": [
 			{
-				"name": "From HTTP to Blob",
+				"name": "Copy data1",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -18,24 +18,15 @@
 					"source": {
 						"type": "DelimitedTextSource",
 						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings",
-							"skipLineCount": 0
+							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".csv"
-						}
+						"type": "AzureSqlSink"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -226,13 +217,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedTextWeb",
+						"referenceName": "BlobTaxiCSV",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedTextBlob",
+						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]

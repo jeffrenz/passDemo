@@ -1,15 +1,17 @@
 {
-	"name": "DelimitedTextWeb",
+	"name": "BlobTaxiCSV",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "NYCTaxiSite",
+			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "yellow_tripdata_2019-03.csv",
+				"container": "nyc"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "",

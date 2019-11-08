@@ -1,96 +1,89 @@
 {
-	"name": "DelimitedTextBlob",
+	"name": "AzureSynapseAnalyticsTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "AzureSynapseAnalytics1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
-		"typeProperties": {
-			"location": {
-				"type": "AzureBlobStorageLocation",
-				"fileName": "yellow_tripdata_2019-03.csv",
-				"container": "nyc"
-			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
-		},
+		"type": "AzureSqlDWTable",
 		"schema": [
 			{
 				"name": "VendorID",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "tpep_pickup_datetime",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "tpep_dropoff_datetime",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "passenger_count",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "trip_distance",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "RatecodeID",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "store_and_fwd_flag",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "PULocationID",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "DOLocationID",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "payment_type",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "fare_amount",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "extra",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "mta_tax",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "tip_amount",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "tolls_amount",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "improvement_surcharge",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "total_amount",
-				"type": "String"
+				"type": "varchar"
 			},
 			{
 				"name": "congestion_surcharge",
-				"type": "String"
+				"type": "varchar"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "ext",
+			"table": "Trip2019"
+		}
 	}
 }
