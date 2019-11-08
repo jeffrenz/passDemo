@@ -148,7 +148,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"name": "extra\tString",
+									"name": "extra",
 									"type": "String"
 								}
 							},
