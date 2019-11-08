@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "http_to_blob",
 	"properties": {
 		"activities": [
 			{
