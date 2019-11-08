@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@range(4,6)",
+						"value": "@range(1,6)",
 						"type": "Expression"
 					},
 					"isSequential": true,
