@@ -5,11 +5,20 @@
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"number": {
+				"type": "int"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('yellow_tripdata_2019-0',string(dataset().number),'.csv')",
+					"type": "Expression"
+				},
 				"container": "nyc"
 			},
 			"columnDelimiter": ",",
