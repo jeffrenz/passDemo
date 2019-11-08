@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "blob_to_azureSQL",
 	"properties": {
 		"activities": [
 			{
