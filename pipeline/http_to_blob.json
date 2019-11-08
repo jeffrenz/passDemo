@@ -232,7 +232,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedTextBlob",
+						"referenceName": "BlobTaxiCSV",
 						"type": "DatasetReference"
 					}
 				]

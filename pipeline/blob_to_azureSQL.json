@@ -217,7 +217,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedTextBlob",
+						"referenceName": "BlobTaxiCSV",
 						"type": "DatasetReference"
 					}
 				],
