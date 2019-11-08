@@ -22,7 +22,7 @@
 				"container": "nyc"
 			},
 			"columnDelimiter": ",",
-			"escapeChar": "\\",
+			"escapeChar": "",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
