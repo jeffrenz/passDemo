@@ -1,0 +1,234 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "VendorID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VendorID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "tpep_pickup_datetime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tpep_pickup_datetime",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "tpep_dropoff_datetime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tpep_dropoff_datetime",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "passenger_count",
+									"type": "String"
+								},
+								"sink": {
+									"name": "passenger_count",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "trip_distance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "trip_distance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RatecodeID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RatecodeID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "store_and_fwd_flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "store_and_fwd_flag",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PULocationID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PULocationID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DOLocationID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DOLocationID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "payment_type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "payment_type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fare_amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "fare_amount",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "extra",
+									"type": "String"
+								},
+								"sink": {
+									"name": "extra",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "mta_tax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "mta_tax",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "tip_amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tip_amount",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "tolls_amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "tolls_amount",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "improvement_surcharge",
+									"type": "String"
+								},
+								"sink": {
+									"name": "improvement_surcharge",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "total_amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "total_amount",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "congestion_surcharge",
+									"type": "String"
+								},
+								"sink": {
+									"name": "congestion_surcharge",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedTextBlob",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

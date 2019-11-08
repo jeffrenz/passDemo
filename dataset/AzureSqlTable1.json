@@ -1,0 +1,89 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "VendorID",
+				"type": "varchar"
+			},
+			{
+				"name": "tpep_pickup_datetime",
+				"type": "varchar"
+			},
+			{
+				"name": "tpep_dropoff_datetime",
+				"type": "varchar"
+			},
+			{
+				"name": "passenger_count",
+				"type": "varchar"
+			},
+			{
+				"name": "trip_distance",
+				"type": "varchar"
+			},
+			{
+				"name": "RatecodeID",
+				"type": "varchar"
+			},
+			{
+				"name": "store_and_fwd_flag",
+				"type": "varchar"
+			},
+			{
+				"name": "PULocationID",
+				"type": "varchar"
+			},
+			{
+				"name": "DOLocationID",
+				"type": "varchar"
+			},
+			{
+				"name": "payment_type",
+				"type": "varchar"
+			},
+			{
+				"name": "fare_amount",
+				"type": "varchar"
+			},
+			{
+				"name": "extra",
+				"type": "varchar"
+			},
+			{
+				"name": "mta_tax",
+				"type": "varchar"
+			},
+			{
+				"name": "tip_amount",
+				"type": "varchar"
+			},
+			{
+				"name": "tolls_amount",
+				"type": "varchar"
+			},
+			{
+				"name": "improvement_surcharge",
+				"type": "varchar"
+			},
+			{
+				"name": "total_amount",
+				"type": "varchar"
+			},
+			{
+				"name": "congestion_surcharge",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "ext",
+			"table": "Trip"
+		}
+	}
+}
